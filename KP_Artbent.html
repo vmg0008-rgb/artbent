@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Коммерческое предложение - Artbent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Manrope', sans-serif; 
+      color: #2A231C; 
+      background: #F9F6F3;
+      line-height: 1.6;
+    }
+    .container { 
+      max-width: 900px; 
+      margin: 0 auto; 
+      padding: 60px 40px;
+      background: #FBF8F2;
+    }
+    
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 50px;
+      border-bottom: 2px solid #E9E4DA;
+      padding-bottom: 30px;
+    }
+    .logo { width: 50px; height: 50px; }
+    .logo-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(47,52,59,0.15);
+    }
+    .logo-box div { position: absolute; inset: 0; }
+    .logo-box .main { background: #2F343B; }
+    .logo-box .accent { background: #B98A45; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+    .logo-box .highlight { 
+      background: #E9E4DA; 
+      clip-path: polygon(46% 0, 54% 0, 54% 100%, 46% 100%);
+      transform: skewX(-20deg);
+      transform-origin: center;
+    }
+    
+    .company-info h1 {
+      font-family: 'Spectral', serif;
+      font-size: 32px;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+    .company-info p {
+      font-size: 14px;
+      color: #897C68;
+    }
+    
+    /* Title */
+    h2 {
+      font-family: 'Spectral', serif;
+      font-size: 28px;
+      margin: 40px 0 20px;
+      color: #2F343B;
+      border-left: 4px solid #B98A45;
+      padding-left: 16px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: #5C5246;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2F343B;
+      margin-bottom: 15px;
+    }
+    
+    .section-content {
+      font-size: 15px;
+      color: #5C5246;
+      line-height: 1.7;
+    }
+    
+    /* List */
+    ul, ol {
+      margin-left: 20px;
+      color: #5C5246;
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .feature-card {
+      background: #F9F6F3;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 3px solid #B98A45;
+    }
+    
+    .feature-card .title {
+      font-weight: 600;
+      color: #2F343B;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    
+    .feature-card .desc {
+      font-size: 14px;
+      color: #5C5246;
+    }
+    
+    /* Table */
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+      background: white;
+    }
+    
+    table thead {
+      background: #2F343B;
+      color: #FBF8F2;
+    }
+    
+    table th, table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #E9E4DA;
+      font-size: 14px;
+    }
+    
+    table tr:nth-child(even) {
+      background: #F9F6F3;
+    }
+    
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, #2F343B 0%, #3D4451 100%);
+      color: #FBF8F2;
+      padding: 40px;
+      border-radius: 16px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    
+    .cta-section h3 {
+      font-family: 'Spectral', serif;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .cta-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .contact-item {
+      text-align: left;
+      padding: 12px;
+      background: rgba(233,228,218,0.1);
+      border-radius: 8px;
+    }
+    
+    .contact-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+    
+    .contact-value {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #E9E4DA;
+      text-align: center;
+      font-size: 13px;
+      color: #897C68;
+    }
+    
+    .validity {
+      background: #F9F6F3;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #5C5246;
+      margin: 30px 0;
+      border-left: 3px solid #B98A45;
+    }
+    
+    @media print {
+      body { background: white; }
+      .container { background: white; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-box">
+        <div class="main"></div>
+        <div class="accent"></div>
+        <div class="highlight"></div>
+      </div>
+      <div class="company-info">
+        <h1>ARTBENT</h1>
+        <p>Engineered Bentonite Solutions</p>
+      </div>
+    </div>
+    
+    <!-- Title -->
+    <h2>Коммерческое предложение</h2>
+    <div class="subtitle">
+      Производство и поставка специализированного бентонита для промышленных приложений.
+      <br><strong>Дата:</strong> 11 августа 2026 г.
+    </div>
+    
+    <!-- 1. Компания -->
+    <div class="section">
+      <h2>О компании</h2>
+      <div class="section-content">
+        <p>ООО «Артбент» — специалист в производстве и поставке бентонита с более чем 20-летним опытом на рынке. Мы работаем с ведущими производителями в нефтегазовой отрасли, строительстве, целлюлозно-бумажной промышленности, производстве лакокрасок и косметики.</p>
+        <p style="margin-top: 15px;">Наше конкурентное преимущество — это сочетание высокого качества, доступной цены и индивидуального подхода к каждому клиенту.</p>
+      </div>
+    </div>
+    
+    <!-- 2. Предложение -->
+    <div class="section">
+      <h2>Наше предложение</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="title">⚙️ Engineering Precision</div>
+          <div class="desc">Подбор формулы под вашу технологию с участием инженеров и технологов</div>
+        </div>
+        <div class="feature-card">
+          <div class="title">✓ Гарантированное качество</div>
+          <div class="desc">Контроль каждой партии в собственной лаборатории с выдачей анализов</div>
+        </div>
+        <div class="feature-card">
+          <div class="title">🌍 Глобальная доставка</div>
+          <div class="desc">Сухопутный транспорт и ж/д логистика по всему миру</div>
+        </div>
+        <div class="feature-card">
+          <div class="title">💰 Оптимизация затрат</div>
+          <div class="desc">Экономическая эффективность решений и долгосрочные контракты</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 3. Продукция -->
+    <div class="section">
+      <h2>Марки бентонита</h2>
+      <div class="section-content">
+        Мы предлагаем специализированные марки для различных отраслей:
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Марка</th>
+            <th>Применение</th>
+            <th>Основные характеристики</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AB-Drill</strong></td>
+            <td>Буровые растворы</td>
+            <td>Вязкость, стабильность ствола, низкая фильтрация</td>
+          </tr>
+          <tr>
+            <td><strong>AB-Paper</strong></td>
+            <td>Целлюлозно-бумажная промышленность</td>
+            <td>Наполнитель, удержание волокна, контроль белизны</td>
+          </tr>
+          <tr>
+            <td><strong>AB-Coat</strong></td>
+            <td>Лакокраски и дисперсии</td>
+            <td>Реологические добавки, загустители, стабилизаторы</td>
+          </tr>
+          <tr>
+            <td><strong>AB-Cast</strong></td>
+            <td>Литейное производство</td>
+            <td>Связующие для форм, высокая огнеупорность</td>
+          </tr>
+          <tr>
+            <td><strong>AB-Water</strong></td>
+            <td>Очистка воды</td>
+            <td>Адсорбция загрязнений, безопасность пищевых производств</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- 4. Услуги -->
+    <div class="section">
+      <h2>Услуги</h2>
+      <ul>
+        <li><strong>Техническая консультация:</strong> помощь в выборе марки под вашу технологию</li>
+        <li><strong>Образцы:</strong> бесплатные пробные партии для испытаний</li>
+        <li><strong>Тестирование:</strong> проведение лабораторных анализов вместе с вашей командой</li>
+        <li><strong>Сопровождение:</strong> технический маркетинг и поддержка во время внедрения</li>
+        <li><strong>Логистика:</strong> доставка в МКР или мешках по всему миру</li>
+        <li><strong>Экспортное оформление:</strong> полное сопровождение ВЭД</li>
+      </ul>
+    </div>
+    
+    <!-- 5. Производство -->
+    <div class="section">
+      <h2>Производственные возможности</h2>
+      <div class="section-content">
+        <ul style="margin-top: 15px;">
+          <li><strong>Добыча:</strong> собственные месторождения бентонита в регионах с высоким качеством сырья</li>
+          <li><strong>Переработка:</strong> активация, помол и другие технологические процессы на современном оборудовании</li>
+          <li><strong>Контроль качества:</strong> 100% партий проходят лабораторный анализ</li>
+          <li><strong>Фасовка:</strong> МКР, мешки по 25 кг, оптовые партии под заказ</li>
+          <li><strong>Хранение:</strong> современные складские помещения с климат-контролем</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 6. CTA -->
+    <div class="cta-section">
+      <h3>Сотрудничество с Artbent</h3>
+      <p>Мы готовы обсудить ваши требования и предложить оптимальное решение. Минимальный объем заказа — гибкий график поставок.</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-label">📞 Телефон</div>
+          <div class="contact-value">+7 (___) ___-__-__</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">📧 Email</div>
+          <div class="contact-value">info@artbent.ru</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">💬 WhatsApp / Telegram</div>
+          <div class="contact-value">Доступны</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">🌐 Веб-сайт</div>
+          <div class="contact-value">www.artbent.ru</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 7. Условия -->
+    <div class="section">
+      <h2>Условия поставки</h2>
+      <div class="validity">
+        <strong>Коммерческое предложение действительно 30 дней с момента выдачи.</strong>
+      </div>
+      <div class="section-content">
+        <ul>
+          <li><strong>Минимальный заказ:</strong> от 500 кг</li>
+          <li><strong>Транспорт:</strong> сухопутный или ж/д в зависимости от объема и маршрута</li>
+          <li><strong>Упаковка:</strong> МКР (1 т) или мешки по 25 кг</li>
+          <li><strong>Сроки:</strong> от 5-7 дней после подтверждения заказа</li>
+          <li><strong>Оплата:</strong> по счету, возможны отсрочки для постоянных партнеров</li>
+          <li><strong>Гарантия:</strong> соответствие качества техническим спецификациям при правильном хранении</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 8. FAQ -->
+    <div class="section">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="section-content" style="background: #F9F6F3; padding: 20px; border-radius: 12px;">
+        <p><strong>Как выбрать нужную марку?</strong><br>
+        Свяжитесь с нашей технической командой. Мы проведем анализ вашего производства и порекомендуем оптимальное решение.</p>
+        
+        <p style="margin-top: 15px;"><strong>Есть ли скидки на большие объемы?</strong><br>
+        Да. Для постоянных партнеров и крупных объемов предусмотрены специальные условия.</p>
+        
+        <p style="margin-top: 15px;"><strong>Как долго действует качество при хранении?</strong><br>
+        При правильном хранении (в сухом помещении) качество сохраняется 12+ месяцев.</p>
+        
+        <p style="margin-top: 15px;"><strong>Возможна ли разработка индивидуальной формулы?</strong><br>
+        Да. Мы предлагаем услугу Custom Formulation для решения специфических задач.</p>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p>ООО «Артбент» · Производство и поставка бентонита для промышленности<br>
+      По всему миру · Надежность · Инженерный подход<br>
+      <span style="color: #5C5246;">© 2026 Artbent. All rights reserved.</span></p>
+    </div>
+  </div>
+</body>
+</html>

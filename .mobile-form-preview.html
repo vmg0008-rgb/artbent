@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>html,body{margin:0;overflow:hidden}iframe{display:block;width:100vw;height:100vh;border:0}</style>
+<iframe id="preview" src="Artbent%20Landing.dc.html"></iframe>
+<script>
+  preview.addEventListener('load', () => setTimeout(() => {
+    const doc = preview.contentDocument;
+    const card = doc.querySelector('.landing-form-card');
+    const title = doc.querySelector('.landing-form-title');
+    const row = doc.querySelector('.landing-form-row');
+    const link = doc.querySelector('.landing-form-copy a');
+    document.body.innerHTML = '<pre>' + JSON.stringify({
+      viewport: doc.documentElement.clientWidth,
+      cardClientWidth: card.clientWidth,
+      cardScrollWidth: card.scrollWidth,
+      titleClientWidth: title.clientWidth,
+      titleScrollWidth: title.scrollWidth,
+      linkClientWidth: link.clientWidth,
+      linkScrollWidth: link.scrollWidth,
+      rowColumns: getComputedStyle(row).gridTemplateColumns
+    }, null, 2) + '</pre>';
+  }, 2200));
+</script>

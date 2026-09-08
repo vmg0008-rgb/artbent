@@ -1,0 +1,51 @@
+{
+  "$meta": {
+    "name": "Artbent Design Tokens",
+    "description": "Земляная геологическая палитра. Все цвета тёплые.",
+    "version": "1.0"
+  },
+  "color": {
+    "clay": {
+      "50": "#FAF1EC", "100": "#F4DACE", "200": "#E8B49E", "300": "#DA8C6F", "400": "#C96A45",
+      "500": "#B24A28", "600": "#9C3F20", "700": "#7E3219", "800": "#5E2613", "900": "#3E190D"
+    },
+    "ochre": {
+      "50": "#FBF5E8", "100": "#F3E4C3", "200": "#E7CB8E", "300": "#D6AD58", "400": "#C28A3C",
+      "500": "#A9733C", "600": "#8C5E2E", "700": "#6E4926", "800": "#523619", "900": "#38240F"
+    },
+    "umber": {
+      "0": "#FFFFFF", "50": "#FBF8F2", "100": "#F7F2E9", "200": "#EFE8DB", "300": "#E2D8C6", "400": "#CDBFA8",
+      "500": "#AC9C84", "600": "#897C68", "700": "#5C5246", "800": "#3D362C", "900": "#2A231C"
+    },
+    "semantic": {
+      "success": "#5E7345",
+      "warning": "#C8901F",
+      "danger": "#A33524",
+      "info": "#5B6B72"
+    }
+  },
+  "role": {
+    "bg": "{color.umber.200}",
+    "surface": "{color.umber.50}",
+    "surface-alt": "{color.umber.100}",
+    "border": "{color.umber.300}",
+    "ink": "{color.umber.900}",
+    "muted": "{color.umber.700}",
+    "accent": "{color.clay.500}",
+    "accent-hover": "{color.clay.600}",
+    "on-accent": "{color.umber.50}"
+  },
+  "industry": {
+    "drill": "{color.clay.500}",
+    "paper": "{color.semantic.info}",
+    "coat": "{color.ochre.500}"
+  },
+  "font": {
+    "display": "'Spectral', Georgia, serif",
+    "sans": "'Manrope', system-ui, sans-serif",
+    "mono": "'JetBrains Mono', monospace"
+  },
+  "radius": {
+    "sm": "6px", "md": "10px", "lg": "15px", "xl": "22px", "pill": "999px"
+  }
+}

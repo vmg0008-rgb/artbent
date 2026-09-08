@@ -1,0 +1,16 @@
+.footer-logo {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.footer-logo img {
+  display: block;
+  width: 170px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  transform: none;
+  filter: none;
+  opacity: 1;
+}

@@ -1,0 +1,81 @@
+/* ============================================================
+   Artbent — Design Tokens
+   Земляная геологическая палитра. Все цвета — тёплые.
+   ============================================================ */
+
+:root {
+  /* ---------- Акцент: Терракота (Clay / primary) ---------- */
+  --clay-50:  #FAF1EC;
+  --clay-100: #F4DACE;
+  --clay-200: #E8B49E;
+  --clay-300: #DA8C6F;
+  --clay-400: #C96A45;
+  --clay-500: #B24A28; /* base */
+  --clay-600: #9C3F20;
+  --clay-700: #7E3219;
+  --clay-800: #5E2613;
+  --clay-900: #3E190D;
+
+  /* ---------- Акцент: Охра (Ochre / secondary) ---------- */
+  --ochre-50:  #FBF5E8;
+  --ochre-100: #F3E4C3;
+  --ochre-200: #E7CB8E;
+  --ochre-300: #D6AD58;
+  --ochre-400: #C28A3C; /* base */
+  --ochre-500: #A9733C;
+  --ochre-600: #8C5E2E;
+  --ochre-700: #6E4926;
+  --ochre-800: #523619;
+  --ochre-900: #38240F;
+
+  /* ---------- Нейтральные: Умбра (warm neutrals) ---------- */
+  --umber-0:   #FFFFFF;
+  --umber-50:  #FBF8F2;
+  --umber-100: #F7F2E9;
+  --umber-200: #EFE8DB;
+  --umber-300: #E2D8C6;
+  --umber-400: #CDBFA8;
+  --umber-500: #AC9C84;
+  --umber-600: #897C68;
+  --umber-700: #5C5246;
+  --umber-800: #3D362C;
+  --umber-900: #2A231C; /* ink */
+
+  /* ---------- Семантические ---------- */
+  --success: #5E7345; /* мох   */
+  --warning: #C8901F; /* амбра */
+  --danger:  #A33524; /* кирпич */
+  --info:    #5B6B72; /* сланец */
+
+  /* ---------- Роли / токены интерфейса ---------- */
+  --color-bg:           var(--umber-200);
+  --color-surface:      var(--umber-50);
+  --color-surface-alt:  var(--umber-100);
+  --color-border:       var(--umber-300);
+  --color-ink:          var(--umber-900);
+  --color-muted:        var(--umber-700);
+  --color-accent:       var(--clay-500);
+  --color-accent-hover: var(--clay-600);
+  --color-on-accent:    var(--umber-50);
+
+  /* ---------- Цветовой код отраслей ---------- */
+  --industry-drill: var(--clay-500);  /* Бурение     */
+  --industry-paper: var(--info);      /* Бумага      */
+  --industry-coat:  var(--ochre-500); /* Лакокраска  */
+
+  /* ---------- Типографика ---------- */
+  --font-display: 'Spectral', Georgia, serif;
+  --font-sans:    'Manrope', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ---------- Радиусы ---------- */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  15px;
+  --radius-xl:  22px;
+  --radius-pill: 999px;
+
+  /* ---------- Тени ---------- */
+  --shadow-card: 0 20px 36px -22px rgba(42, 35, 28, 0.5);
+  --shadow-pop:  0 30px 60px -34px rgba(42, 35, 28, 0.4);
+}

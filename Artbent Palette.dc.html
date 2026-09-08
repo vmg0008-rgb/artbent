@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#EFE8DB; font-family:'Manrope',sans-serif; color:#2A231C; -webkit-font-smoothing:antialiased; }
+    * { box-sizing:border-box; }
+  </style>
+</helmet>
+
+<div style="max-width:1120px;margin:0 auto;padding:54px 32px 80px">
+
+  <!-- header -->
+  <div style="display:flex;align-items:center;gap:13px;margin-bottom:8px">
+    <div style="width:32px;height:32px;border-radius:9px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(47,52,59,0.12)"><div style="position:absolute;inset:0;background:#2F343B"></div><div style="position:absolute;inset:0;background:#B98A45;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#E9E4DA;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div></div>
+    <div style="font-family:'Spectral',serif;font-weight:700;font-size:25px">Artbent</div>
+  </div>
+  <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:44px;letter-spacing:-0.5px;margin:0 0 10px">Цветовая палитра</h1>
+  <p style="font-size:17px;color:#5C5246;max-width:580px;margin:0 0 48px;line-height:1.55">Промышленная система: графит как основа надежности, медь как акцент премиума, сланец для технологий. Каждый цвет — со шкалой оттенков для интерфейса и печати.</p>
+
+  <!-- ===== ACCENTS ===== -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#A9733C;margin-bottom:18px">01 · Акцентные</div>
+
+  <div style="background:#FBF8F2;border:1px solid #E2D8C6;border-radius:18px;padding:30px;margin-bottom:18px">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:26px">Графит</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#786C5C">Slate · primary</div>
+    </div>
+    <p style="font-size:14.5px;color:#786C5C;margin:0 0 22px;max-width:560px;line-height:1.5">Основной цвет надежности и технологий. Кнопки действия, заголовки, важные акценты. База — 500.</p>
+    <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:8px">
+      <sc-for list="{{ graphite }}" as="s" hint-placeholder-count="10">
+        <div>
+          <div style="{{ s.swatch }}"><span>{{ s.step }}</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#786C5C;margin-top:7px;text-align:center">{{ s.hex }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="background:#FBF8F2;border:1px solid #E2D8C6;border-radius:18px;padding:30px;margin-bottom:44px">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:26px">Медь</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#786C5C">Copper · accent</div>
+    </div>
+    <p style="font-size:14.5px;color:#786C5C;margin:0 0 22px;max-width:560px;line-height:1.5">Премиальный акцент: кнопки, теги, выделения, символ качества и природных ресурсов. База — 500.</p>
+    <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:8px">
+      <sc-for list="{{ copper }}" as="s" hint-placeholder-count="10">
+        <div>
+          <div style="{{ s.swatch }}"><span>{{ s.step }}</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#786C5C;margin-top:7px;text-align:center">{{ s.hex }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===== NEUTRALS ===== -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#A9733C;margin-bottom:18px">02 · Нейтральные · Минеральный</div>
+  <div style="background:#FBF8F2;border:1px solid #E2D8C6;border-radius:18px;padding:30px;margin-bottom:44px">
+    <p style="font-size:14.5px;color:#786C5C;margin:0 0 22px;max-width:560px;line-height:1.5">Система от светлого минерального (бежево-белый) до темного графита. Фоны, поверхности, границы, текст. Чистота и минимализм.</p>
+    <div style="display:grid;grid-template-columns:repeat(11,1fr);gap:8px">
+      <sc-for list="{{ neutral }}" as="s" hint-placeholder-count="11">
+        <div>
+          <div style="{{ s.swatch }}"><span>{{ s.step }}</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#786C5C;margin-top:7px;text-align:center">{{ s.hex }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===== SEMANTIC ===== -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#A9733C;margin-bottom:18px">03 · Семантические</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:44px">
+    <sc-for list="{{ semantic }}" as="s" hint-placeholder-count="4">
+      <div style="background:#FBF8F2;border:1px solid #E2D8C6;border-radius:16px;overflow:hidden">
+        <div style="{{ s.block }}"></div>
+        <div style="padding:16px 18px">
+          <div style="font-family:'Spectral',serif;font-weight:600;font-size:19px">{{ s.name }}</div>
+          <div style="font-size:13px;color:#786C5C;margin:3px 0 8px">{{ s.role }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5C5246">{{ s.hex }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- ===== ROLES / TOKENS ===== -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#A9733C;margin-bottom:18px">04 · Роли / токены</div>
+  <div style="background:#FBF8F2;border:1px solid #E2D8C6;border-radius:18px;overflow:hidden;margin-bottom:44px">
+    <sc-for list="{{ tokens }}" as="t" hint-placeholder-count="9">
+      <div style="display:grid;grid-template-columns:46px 1.1fr 1fr 1.6fr;align-items:center;gap:16px;padding:14px 22px;border-top:1px solid #EDE5D6">
+        <div style="{{ t.chip }}"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13.5px;color:#2A231C">{{ t.token }}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#786C5C">{{ t.hex }}</div>
+        <div style="font-size:14px;color:#5C5246">{{ t.use }}</div>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- ===== USAGE / PAIRINGS ===== -->
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#A9733C;margin-bottom:18px">05 · Применение</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+
+    <!-- light surface -->
+    <div style="background:#FBF8F2;border:1px solid #E9E4DA;border-radius:16px;padding:24px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B98A45;margin-bottom:14px">surface · light</div>
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:21px;margin-bottom:6px">Карточка продукта</div>
+      <div style="font-size:13.5px;color:#5C5246;line-height:1.5;margin-bottom:16px">Текст на чистой поверхности, медный акцент, графитовая кнопка.</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0D6B73;background:rgba(13,107,115,0.12);padding:4px 9px;border-radius:6px">бурение</span>
+        <span style="background:#B98A45;color:#FBF8F2;font-weight:700;font-size:13px;padding:9px 16px;border-radius:9px">Запросить</span>
+      </div>
+    </div>
+
+    <!-- dark band -->
+    <div style="background:#2F343B;border:1px solid #2F343B;border-radius:16px;padding:24px;color:#E9E4DA">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#B98A45;margin-bottom:14px">band · dark</div>
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:21px;margin-bottom:6px">Темный блок</div>
+      <div style="font-size:13.5px;color:#D4C5B9;line-height:1.5;margin-bottom:16px">Графит как надежный фон, медь для акцентов, светлый текст.</div>
+      <div style="display:flex;gap:8px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;border:1px solid rgba(233,228,218,0.3);padding:6px 12px;border-radius:7px;color:#E9E4DA">процесс</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;border:1px solid rgba(233,228,218,0.3);padding:6px 12px;border-radius:7px;color:#E9E4DA">процесс</span>
+      </div>
+    </div>
+
+    <!-- strata -->
+    <div style="border:1px solid #E9E4DA;border-radius:16px;overflow:hidden;position:relative;min-height:172px;background:linear-gradient(178deg,#0D6B73 0%,#0D6B73 18%,#1F2329 18%,#1F2329 36%,#2F343B 36%,#2F343B 54%,#B98A45 54%,#B98A45 72%,#E9E4DA 72%,#E9E4DA 100%)">
+      <div style="position:absolute;left:16px;top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.82);background:rgba(47,52,59,0.48);padding:5px 10px;border-radius:6px">стратегия · цветовая</div>
+      <div style="position:absolute;left:16px;bottom:14px;font-family:'Spectral',serif;font-weight:600;font-size:17px;color:#2A231C">Промышленная палитра</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  swatchStyle(hex, fg, base, radius) {
+    return {
+      background: hex,
+      height: '66px',
+      borderRadius: radius || '10px',
+      display: 'flex',
+      alignItems: 'flex-end',
+      padding: '8px 9px',
+      color: fg,
+      fontFamily: "'JetBrains Mono',monospace",
+      fontSize: '11px',
+      boxShadow: base ? '0 0 0 2px #FBF8F2, 0 0 0 4px #2A231C' : 'inset 0 0 0 1px rgba(42,35,28,0.06)',
+    };
+  }
+
+  scale(arr) {
+    return arr.map((s) => ({
+      step: s.step,
+      hex: s.hex,
+      swatch: this.swatchStyle(s.hex, s.fg, s.base),
+    }));
+  }
+
+  renderVals() {
+    const D = '#2A231C', L = '#FBF8F2';
+
+    const graphite = this.scale([
+      { step: '50', hex: '#F1F2F3', fg: D },
+      { step: '100', hex: '#DCE0E3', fg: D },
+      { step: '200', hex: '#B8C0C7', fg: D },
+      { step: '300', hex: '#8F9BA5', fg: D },
+      { step: '400', hex: '#687078', fg: L },
+      { step: '500', hex: '#2F343B', fg: L, base: true },
+      { step: '600', hex: '#272C32', fg: L },
+      { step: '700', hex: '#1F2329', fg: L },
+      { step: '800', hex: '#171A1F', fg: L },
+      { step: '900', hex: '#0F1216', fg: L },
+    ]);
+
+    const copper = this.scale([
+      { step: '50', hex: '#FBF6F0', fg: D },
+      { step: '100', hex: '#F3E5D2', fg: D },
+      { step: '200', hex: '#E6CBA6', fg: D },
+      { step: '300', hex: '#D4AB7A', fg: D },
+      { step: '400', hex: '#C0915E', fg: L },
+      { step: '500', hex: '#B98A45', fg: L, base: true },
+      { step: '600', hex: '#9E7138', fg: L },
+      { step: '700', hex: '#815A2D', fg: L },
+      { step: '800', hex: '#604320', fg: L },
+      { step: '900', hex: '#452D16', fg: L },
+    ]);
+
+    const neutral = this.scale([
+      { step: '0', hex: '#FFFFFF', fg: D },
+      { step: '50', hex: '#F9F6F3', fg: D },
+      { step: '100', hex: '#F2EDE7', fg: D },
+      { step: '200', hex: '#E9E4DA', fg: D },
+      { step: '300', hex: '#DDD6CC', fg: D },
+      { step: '400', hex: '#CDBFA8', fg: D },
+      { step: '500', hex: '#AC9C84', fg: D },
+      { step: '600', hex: '#897C68', fg: L },
+      { step: '700', hex: '#5C5246', fg: L },
+      { step: '800', hex: '#3D362C', fg: L },
+      { step: '900', hex: '#2A231C', fg: L },
+    ]);
+
+    const semBlock = (hex) => ({ background: hex, height: '76px' });
+    const semantic = [
+      { name: 'Успех', role: 'success · зелень', hex: '#4B7A4D', block: semBlock('#4B7A4D') },
+      { name: 'Внимание', role: 'warning · янтарь', hex: '#D19E35', block: semBlock('#D19E35') },
+      { name: 'Ошибка', role: 'error · кирпич', hex: '#A33524', block: semBlock('#A33524') },
+      { name: 'Информация', role: 'info · сланец', hex: '#0D6B73', block: semBlock('#0D6B73') },
+    ];
+
+    const chip = (hex) => ({ width: '46px', height: '46px', borderRadius: '10px', background: hex, boxShadow: 'inset 0 0 0 1px rgba(42,35,28,0.08)' });
+    const tokens = [
+      { token: 'bg', hex: '#F9F6F3', use: 'Основной фон страницы', chip: chip('#F9F6F3') },
+      { token: 'surface', hex: '#FBF8F2', use: 'Карточки, поверхности', chip: chip('#FBF8F2') },
+      { token: 'surface-alt', hex: '#F2EDE7', use: 'Чередующиеся секции', chip: chip('#F2EDE7') },
+      { token: 'border', hex: '#E9E4DA', use: 'Границы, разделители', chip: chip('#E9E4DA') },
+      { token: 'ink', hex: '#2A231C', use: 'Заголовки, основной текст', chip: chip('#2A231C') },
+      { token: 'muted', hex: '#897C68', use: 'Второстепенный текст', chip: chip('#897C68') },
+      { token: 'accent', hex: '#B98A45', use: 'Кнопки, ссылки, акценты', chip: chip('#B98A45') },
+      { token: 'accent-hover', hex: '#9E7138', use: 'Наведение на акцент', chip: chip('#9E7138') },
+      { token: 'on-accent', hex: '#FBF8F2', use: 'Текст на акценте', chip: chip('#FBF8F2') },
+    ];
+
+    return { graphite, copper, neutral, semantic, tokens };
+  }
+}
+</script>
+</body>
+</html>

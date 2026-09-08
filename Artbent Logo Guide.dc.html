@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#E7DECE; font-family:'Manrope',sans-serif; color:#2A231C; -webkit-font-smoothing:antialiased; }
+    * { box-sizing:border-box; }
+  </style>
+</helmet>
+
+<div style="max-width:1100px;margin:0 auto;padding:54px 32px 90px">
+
+  <!-- HEADER -->
+  <a href="Artbent%20Landing.dc.html" style="display:inline-flex;align-items:center;gap:12px;margin-bottom:34px;text-decoration:none;color:inherit">
+    <div style="width:32px;height:32px;border-radius:9px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.12)">
+      <div style="position:absolute;inset:0;background:#B24A28"></div>
+      <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+      <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+    </div>
+    <div style="font-family:'Spectral',serif;font-weight:700;font-size:23px">Artbent</div>
+  </a>
+
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#B98A45;margin-bottom:12px">Гайд знака · «Разлом»</div>
+  <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:46px;letter-spacing:-0.5px;margin:0 0 14px">Логотип Artbent</h1>
+  <p style="font-size:17px;color:#5C5246;max-width:620px;margin:0 0 50px;line-height:1.55">Знак «Разлом» — квадрат, рассечённый диагональным сдвигом породы. Две земляные плоскости и светлая линия сброса. Ниже — построение, охранное поле, размеры и правила использования.</p>
+
+  <!-- HERO MARK -->
+  <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:22px;padding:56px;display:flex;align-items:center;justify-content:center;gap:30px;margin-bottom:24px">
+    <div style="width:108px;height:108px;border-radius:24px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1),0 22px 50px -28px rgba(126,50,25,0.6)">
+      <div style="position:absolute;inset:0;background:#B24A28"></div>
+      <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+      <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+    </div>
+    <div style="font-family:'Spectral',serif;font-weight:700;font-size:64px;letter-spacing:0.5px;color:#2A231C">Artbent</div>
+  </div>
+
+  <!-- THREE COLS: construction / clearspace / minsize -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-bottom:22px">
+
+    <!-- construction -->
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:18px;margin-bottom:6px">Построение</div>
+      <div style="font-size:13.5px;color:#786C5C;line-height:1.5;margin-bottom:20px">Три плоскости: основа, верхний срез по диагонали и линия сброса под наклоном −20°.</div>
+      <div style="display:flex;justify-content:center;padding:8px 0">
+        <div style="width:120px;height:120px;border-radius:18px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.12)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div>
+          <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+          <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(42,35,28,0.25);transform:translateX(-0.5px)"></div>
+          <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(42,35,28,0.25);transform:translateY(-0.5px)"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- clearspace -->
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:18px;margin-bottom:6px">Охранное поле</div>
+      <div style="font-size:13.5px;color:#786C5C;line-height:1.5;margin-bottom:20px">Свободное поле вокруг знака — не меньше половины его высоты (½×).</div>
+      <div style="display:flex;justify-content:center;padding:8px 0">
+        <div style="position:relative;padding:30px;border:1.5px dashed #C9B894;border-radius:10px">
+          <div style="position:absolute;left:6px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:10px;color:#A9733C">½×</div>
+          <div style="width:60px;height:60px;border-radius:11px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.12)">
+            <div style="position:absolute;inset:0;background:#B24A28"></div>
+            <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+            <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- min size -->
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:18px;margin-bottom:6px">Минимальный размер</div>
+      <div style="font-size:13.5px;color:#786C5C;line-height:1.5;margin-bottom:20px">Знак читается до 16px. Lockup с названием — не меньше 96px по ширине.</div>
+      <div style="display:flex;align-items:flex-end;justify-content:center;gap:20px;padding:8px 0">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="width:24px;height:24px;border-radius:6px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background:#B24A28"></div>
+            <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+            <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9A8F7E">24</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+          <div style="width:16px;height:16px;border-radius:4px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background:#B24A28"></div>
+            <div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div>
+            <div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#9A8F7E">16</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAVICON ROW -->
+  <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:28px;margin-bottom:22px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:20px">Favicon и иконки приложения</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#A9733C">16 · 32 · 48 · 180 px</div>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="width:16px;height:16px;border-radius:4px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9A8F7E">16 · вкладка</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="width:32px;height:32px;border-radius:7px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9A8F7E">32 · retina</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="width:48px;height:48px;border-radius:10px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9A8F7E">48 · ярлык</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="width:80px;height:80px;border-radius:18px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9A8F7E">180 · iOS экран</span>
+      </div>
+      <!-- iOS home screen mock -->
+      <div style="margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div style="width:56px;height:56px;border-radius:13px;overflow:hidden;position:relative;box-shadow:0 6px 14px -6px rgba(42,35,28,0.5)">
+            <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+          <span style="font-size:11px;font-weight:600;color:#5C5246">Artbent</span>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9A8F7E">на экране телефона</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONO + REVERSED -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-bottom:22px">
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:17px">Основной</div>
+      <div style="flex:1;background:#fff;border:1px solid #EDE5D6;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:28px">
+        <div style="width:64px;height:64px;border-radius:14px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.1)">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+      </div>
+      <div style="font-size:12.5px;color:#9A8F7E;font-family:'JetBrains Mono',monospace">терракота + охра</div>
+    </div>
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:17px">Моно · печать / штамп</div>
+      <div style="flex:1;background:#fff;border:1px solid #EDE5D6;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:28px">
+        <div style="width:64px;height:64px;border-radius:14px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(42,35,28,0.18)">
+          <div style="position:absolute;inset:0;background:#2A231C"></div><div style="position:absolute;inset:0;background:#6E6256;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#fff;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+      </div>
+      <div style="font-size:12.5px;color:#9A8F7E;font-family:'JetBrains Mono',monospace">один цвет · ч/б</div>
+    </div>
+    <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Spectral',serif;font-weight:600;font-size:17px">На тёмном</div>
+      <div style="flex:1;background:#2A231C;border:1px solid #1E1812;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:28px">
+        <div style="width:64px;height:64px;border-radius:14px;overflow:hidden;position:relative">
+          <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#2A231C;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+        </div>
+      </div>
+      <div style="font-size:12.5px;color:#9A8F7E;font-family:'JetBrains Mono',monospace">линия сброса = цвет фона</div>
+    </div>
+  </div>
+
+  <!-- MISUSE -->
+  <div style="background:#FBF8F2;border:1px solid #DDD0BA;border-radius:18px;padding:28px">
+    <div style="font-family:'Spectral',serif;font-weight:600;font-size:20px;margin-bottom:4px">Чего не делать</div>
+    <div style="font-size:13.5px;color:#786C5C;margin-bottom:22px">Знак сохраняет пропорции, угол сброса и фирменные цвета.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+
+      <!-- stretch -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="height:90px;display:flex;align-items:center;justify-content:center;width:100%;background:#fff;border:1px solid #EDE5D6;border-radius:12px">
+          <div style="width:84px;height:50px;border-radius:11px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px"><span style="color:#B24A28;font-size:15px">✕</span><span style="font-size:12.5px;color:#786C5C">Не растягивать</span></div>
+      </div>
+
+      <!-- recolor -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="height:90px;display:flex;align-items:center;justify-content:center;width:100%;background:#fff;border:1px solid #EDE5D6;border-radius:12px">
+          <div style="width:54px;height:54px;border-radius:12px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background:#3A6E5C"></div><div style="position:absolute;inset:0;background:#5AA0E0;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px"><span style="color:#B24A28;font-size:15px">✕</span><span style="font-size:12.5px;color:#786C5C">Не перекрашивать</span></div>
+      </div>
+
+      <!-- rotate -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="height:90px;display:flex;align-items:center;justify-content:center;width:100%;background:#fff;border:1px solid #EDE5D6;border-radius:12px">
+          <div style="width:54px;height:54px;border-radius:12px;overflow:hidden;position:relative;transform:rotate(28deg)">
+            <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px"><span style="color:#B24A28;font-size:15px">✕</span><span style="font-size:12.5px;color:#786C5C">Не вращать</span></div>
+      </div>
+
+      <!-- shadow/effects -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="height:90px;display:flex;align-items:center;justify-content:center;width:100%;background:#fff;border:1px solid #EDE5D6;border-radius:12px">
+          <div style="width:54px;height:54px;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 8px 4px rgba(178,74,40,0.6),0 0 18px rgba(194,138,60,0.9)">
+            <div style="position:absolute;inset:0;background:#B24A28"></div><div style="position:absolute;inset:0;background:#C28A3C;clip-path:polygon(100% 0,100% 100%,0 100%)"></div><div style="position:absolute;inset:0;background:#EFE8DB;clip-path:polygon(46% 0,54% 0,54% 100%,46% 100%);transform:skewX(-20deg);transform-origin:center"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px"><span style="color:#B24A28;font-size:15px">✕</span><span style="font-size:12.5px;color:#786C5C">Без теней / свечения</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&amp;family=PT+Mono&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #eceae3; font-family: 'Neucha', cursive; color: #33312e; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;padding-bottom:80px">
+
+  <!-- ===== Top bar with tabs ===== -->
+  <div style="position:sticky;top:0;z-index:50;background:#eceae3;border-bottom:2px solid #33312e;padding:16px 28px 14px">
+    <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+      <div style="font-size:26px;line-height:1">Artbent — вайрфреймы лендинга</div>
+      <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">4 варианта структуры + доп. экраны · лоу-фай</div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+      <sc-for list="{{ tabBtns }}" as="t" hint-placeholder-count="5">
+        <button onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
+      </sc-for>
+    </div>
+    <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61;margin-top:10px">{{ tabDesc }}</div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ВАРИАНТ 1 · Классика: оффер → отрасли → марки → доверие → форма -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ show1 }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Вариант 1 · Классика" style="padding:36px 20px 0">
+    <div style="width:860px;max-width:100%;margin:0 auto;background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:5px 6px 0 rgba(51,49,46,0.12);overflow:hidden">
+
+      <!-- header -->
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 24px;border-bottom:2px solid #33312e">
+        <div style="font-size:24px;letter-spacing:1px">ARTBENT</div>
+        <div style="display:flex;gap:16px;font-size:16px;color:#6f6a61;flex:1">
+          <span>Продукция</span><span>Отрасли</span><span>Производство</span><span>Контакты</span>
+        </div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">RU · EN · ՀԱՅ</div>
+        <div style="font-size:16px"><a href="tel:+37477294888" style="color:inherit;text-decoration:none">+374 77 294 888</a></div>
+        <div style="padding:7px 16px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:16px">Запросить коммерческое предложение</div>
+      </div>
+
+      <!-- hero -->
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;padding:34px 26px">
+        <div style="display:flex;flex-direction:column;gap:16px;justify-content:center">
+          <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">// hero: оффер + 2 пути конверсии</div>
+          <div style="font-size:38px;line-height:1.15">Производство и поставка бентонита под вашу задачу</div>
+          <div style="font-size:18px;color:#6f6a61">Бурение, бумага, ЛКМ. Подбираем марку и формулу, отгружаем в РФ и Европу.</div>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <div style="padding:11px 22px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:18px">Запросить коммерческое предложение / образцы</div>
+            <div style="padding:9px 18px;border:2px solid #33312e;border-radius:999px;font-size:16px">WhatsApp</div>
+            <div style="padding:9px 18px;border:2px solid #33312e;border-radius:999px;font-size:16px">Telegram</div>
+          </div>
+        </div>
+        <div style="min-height:260px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:12px;color:#8a857d;text-align:center;padding:12px">фото: производство /<br>продукт крупным планом</div>
+      </div>
+
+      <!-- industries -->
+      <div style="padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// отрасли применения — навигация вглубь</div>
+        <div style="font-size:28px;margin-bottom:18px">Для каких задач</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="width:42px;height:42px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:19px">Бурение</div>
+            <div style="font-size:14px;color:#6f6a61">Буровые растворы</div>
+            <div style="font-size:14px;color:#d9480f">Подробнее →</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="width:42px;height:42px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:19px">Бумага</div>
+            <div style="font-size:14px;color:#6f6a61">Наполнитель, удержание</div>
+            <div style="font-size:14px;color:#d9480f">Подробнее →</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="width:42px;height:42px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:19px">Лакокраска</div>
+            <div style="font-size:14px;color:#6f6a61">Реология, загуститель</div>
+            <div style="font-size:14px;color:#d9480f">Подробнее →</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="width:42px;height:42px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:14px;color:#6f6a61">Очищающие основы</div>
+            <div style="font-size:14px;color:#d9480f">Подробнее →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- grades table -->
+      <div style="padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// марки — второй срез каталога, без цен</div>
+        <div style="font-size:28px;margin-bottom:18px">Марки бентонита</div>
+        <div style="border:2px solid #33312e;border-radius:8px;overflow:hidden">
+          <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr 0.9fr;gap:0;background:#33312e;color:#fffdf8;font-size:15px">
+            <div style="padding:10px 14px">Марка</div><div style="padding:10px 14px">Применение</div><div style="padding:10px 14px">Фасовка</div><div style="padding:10px 14px"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr 0.9fr;border-top:1px solid #d5d0c6;font-size:16px;align-items:center">
+            <div style="padding:12px 14px">AB-Drill</div><div style="padding:12px 14px;color:#6f6a61">Буровые растворы, API</div><div style="padding:12px 14px;color:#6f6a61">МКР / мешки</div><div style="padding:8px 14px"><span style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:14px">Запрос</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr 0.9fr;border-top:1px solid #d5d0c6;font-size:16px;align-items:center">
+            <div style="padding:12px 14px">AB-Paper</div><div style="padding:12px 14px;color:#6f6a61">Бумажное производство</div><div style="padding:12px 14px;color:#6f6a61">МКР</div><div style="padding:8px 14px"><span style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:14px">Запрос</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr 0.9fr;border-top:1px solid #d5d0c6;font-size:16px;align-items:center">
+            <div style="padding:12px 14px">AB-Coat</div><div style="padding:12px 14px;color:#6f6a61">ЛКМ, загустители</div><div style="padding:12px 14px;color:#6f6a61">мешки 25 кг</div><div style="padding:8px 14px"><span style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:14px">Запрос</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr 0.9fr;border-top:1px solid #d5d0c6;font-size:16px;align-items:center">
+          </div>
+        </div>
+        <div style="font-size:15px;color:#6f6a61;margin-top:10px">Нужна другая формула? — Подберём под техническое задание <span style="color:#d9480f">→ запрос</span></div>
+      </div>
+
+      <!-- why us -->
+      <div style="padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// преимущества из брифа: качество / цена / технология</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+          <div style="border:2px solid #33312e;border-radius:8px;padding:18px"><div style="font-size:20px">Качество</div><div style="font-size:15px;color:#6f6a61">Контроль показателей каждой партии</div></div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:18px"><div style="font-size:20px">Цена</div><div style="font-size:15px;color:#6f6a61">Своё производство — без посредников</div></div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:18px"><div style="font-size:20px">Технология</div><div style="font-size:15px;color:#6f6a61">Формула под задачу клиента</div></div>
+        </div>
+      </div>
+
+      <!-- production + geography -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div>
+          <div style="font-size:24px;margin-bottom:12px">Производство</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="height:90px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">фото цеха</div>
+            <div style="height:90px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">фото склада</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:24px;margin-bottom:12px">География поставок</div>
+          <div style="height:90px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">карта: РФ + Европа</div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <div style="padding:30px 26px;border-top:2px solid #33312e;background:#f6f3ec">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// конверсия: форма + мессенджеры + телефон</div>
+        <div style="font-size:28px;margin-bottom:16px">Запросить коммерческое предложение или образцы</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px">
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:16px">Компания</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:16px">Отрасль ▾</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:16px">Телефон / email</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <div style="padding:11px 24px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:18px">Отправить запрос</div>
+          <div style="font-size:15px;color:#6f6a61">или сразу:</div>
+          <div style="padding:8px 16px;border:2px solid #33312e;border-radius:999px;font-size:15px">WhatsApp</div>
+          <div style="padding:8px 16px;border:2px solid #33312e;border-radius:999px;font-size:15px">Telegram</div>
+          <div style="padding:8px 16px;border:2px solid #33312e;border-radius:999px;font-size:15px">☎ Позвонить</div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:2px solid #33312e;font-size:14px;color:#6f6a61">
+        <div>ARTBENT · реквизиты</div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px">RU · EN · ՀԱՅ</div>
+        <div>+374 77 294 888 · info@armbiz.org</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================================================ -->
+  <!-- ВАРИАНТ 2 · От отрасли: hero = выбор задачи -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ show2 }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Вариант 2 · От отрасли" style="padding:36px 20px 0">
+    <div style="width:860px;max-width:100%;margin:0 auto;background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:5px 6px 0 rgba(51,49,46,0.12);overflow:hidden">
+
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 24px;border-bottom:2px solid #33312e">
+        <div style="font-size:24px;letter-spacing:1px">ARTBENT</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">RU · EN · ՀԱՅ</div>
+        <div style="font-size:16px"><a href="tel:+37477294888" style="color:inherit;text-decoration:none">+374 77 294 888</a></div>
+      </div>
+
+      <!-- hero = industry chooser -->
+      <div style="padding:38px 26px 30px;text-align:center">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:8px">// hero = сразу выбор отрасли, минимум слов</div>
+        <div style="font-size:38px;line-height:1.15">Бентонит под вашу отрасль</div>
+        <div style="font-size:18px;color:#6f6a61;margin-top:8px">Выберите задачу — покажем подходящие марки</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px">
+          <div style="border:2px solid #33312e;border-radius:8px;padding:22px 14px;display:flex;flex-direction:column;gap:10px;align-items:center;background:#f6f3ec">
+            <div style="width:54px;height:54px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:20px">Бурение</div>
+            <div style="font-size:13px;color:#6f6a61">буровые растворы · API</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:22px 14px;display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div style="width:54px;height:54px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:20px">Бумага</div>
+            <div style="font-size:13px;color:#6f6a61">наполнитель</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:22px 14px;display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div style="width:54px;height:54px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:20px">ЛКМ</div>
+            <div style="font-size:13px;color:#6f6a61">реология</div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:22px 14px;display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div style="width:54px;height:54px;border:2px dashed #b5b0a8;border-radius:50%"></div>
+            <div style="font-size:13px;color:#6f6a61">основы</div>
+          </div>
+        </div>
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-top:10px">клик по плитке → якорь на секцию отрасли ↓</div>
+      </div>
+
+      <!-- industry section example -->
+      <div style="padding:30px 26px;border-top:2px solid #33312e;background:#f6f3ec">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// секция отрасли (повторяется ×4): задача + марки + CTA</div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start">
+          <div>
+            <div style="font-size:28px">Бурение</div>
+            <div style="font-size:16px;color:#6f6a61;margin-top:8px">Бентонит для буровых растворов: реология, контроль фильтрации, вынос шлама и устойчивость ствола. Подбор продукции с учетом требований API.</div>
+            <div style="height:110px;margin-top:14px;background:repeating-linear-gradient(45deg,#eceae3,#eceae3 10px,#f6f3ec 10px,#f6f3ec 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">фото: буровая</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="border:2px solid #33312e;border-radius:8px;padding:14px 16px;background:#fffdf8;display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-size:19px">AB-Drill</div><div style="font-size:14px;color:#6f6a61">выход раствора ≥ __ м³/т</div></div>
+              <div style="padding:6px 14px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:14px">Запрос</div>
+            </div>
+            <div style="border:2px solid #33312e;border-radius:8px;padding:14px 16px;background:#fffdf8;display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-size:19px">AB-Drill Pro</div><div style="font-size:14px;color:#6f6a61">подбор характеристик под требования проекта</div></div>
+              <div style="padding:6px 14px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:14px">Запрос</div>
+            </div>
+              <div style="font-size:15px;color:#6f6a61">+ подбор формулы под техническое задание</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:18px 26px;border-top:2px dashed #d5d0c6;text-align:center;font-family:'PT Mono',monospace;font-size:12px;color:#a39c90">⋮ ещё 2 секции отраслей (бумага / ЛКМ) ⋮</div>
+
+      <!-- compact about -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:26px;border-top:2px dashed #d5d0c6;align-items:center">
+        <div style="font-size:24px">Своё производство,<br>контроль качества</div>
+        <div style="height:80px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">фото производства</div>
+        <div style="font-size:15px;color:#6f6a61">Качество + цена + технология. Поставки в РФ и Европу. Кейсы клиентов — позже (заглушка).</div>
+      </div>
+
+      <!-- form -->
+      <div style="padding:30px 26px;border-top:2px solid #33312e">
+        <div style="font-size:28px;margin-bottom:14px">Запросить коммерческое предложение</div>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px">
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:16px">Отрасль + контакт (одно поле-комбо)</div>
+          <div style="padding:10px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:17px;text-align:center">Отправить</div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;padding:16px 24px;border-top:2px solid #33312e;font-size:14px;color:#6f6a61">
+        <div>ARTBENT</div><div style="font-family:'PT Mono',monospace;font-size:12px">RU · EN · ՀԱՅ</div>
+      </div>
+    </div>
+
+    <!-- sticky bar mock -->
+    <div style="width:860px;max-width:100%;margin:14px auto 0;border:2px dashed #8a857d;border-radius:999px;padding:10px 22px;display:flex;gap:14px;align-items:center;justify-content:center;background:#fffdf8">
+      <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">sticky-бар внизу экрана:</div>
+      <div style="font-size:15px">☎ Телефон</div>
+      <div style="padding:5px 13px;border:2px solid #33312e;border-radius:999px;font-size:14px">WhatsApp</div>
+      <div style="padding:5px 13px;border:2px solid #33312e;border-radius:999px;font-size:14px">Telegram</div>
+      <div style="padding:6px 14px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:14px">Запросить коммерческое предложение</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================================================ -->
+  <!-- ВАРИАНТ 3 · Технический даташит -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ show3 }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Вариант 3 · Технический" style="padding:36px 20px 0">
+    <div style="width:860px;max-width:100%;margin:0 auto;background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:5px 6px 0 rgba(51,49,46,0.12);overflow:hidden">
+
+      <div style="display:flex;align-items:center;gap:20px;padding:12px 24px;border-bottom:2px solid #33312e">
+        <div style="font-size:22px;letter-spacing:1px">ARTBENT</div>
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">технический поставщик бентонита</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">RU · EN · ՀԱՅ</div>
+        <div style="padding:6px 14px;border:2px solid #33312e;border-radius:6px;font-size:15px">Запросить образцы</div>
+      </div>
+
+      <!-- hero with spec table -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:32px 26px">
+        <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+          <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">// hero для технолога: цифры вместо лозунгов</div>
+          <div style="font-size:34px;line-height:1.15">Бентонит с показателями под ваш техпроцесс</div>
+          <div style="font-size:16px;color:#6f6a61">Активация и модификация под спецификацию клиента. SDS на каждую марку.</div>
+          <div style="display:flex;gap:12px">
+            <div style="padding:10px 20px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:17px">Скачать SDS</div>
+            <div style="padding:10px 20px;border:2px solid #33312e;border-radius:6px;font-size:17px">Запросить образцы</div>
+          </div>
+        </div>
+        <div style="border:2px solid #33312e;border-radius:8px;overflow:hidden;align-self:center">
+          <div style="background:#33312e;color:#fffdf8;padding:8px 14px;font-family:'PT Mono',monospace;font-size:12px">типовые показатели (пример)</div>
+          <div style="display:grid;grid-template-columns:1fr auto;font-size:15px">
+            <div style="padding:9px 14px;border-top:1px solid #d5d0c6">Монтмориллонит</div><div style="padding:9px 14px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">≥ __ %</div>
+            <div style="padding:9px 14px;border-top:1px solid #d5d0c6">Влажность</div><div style="padding:9px 14px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">≤ __ %</div>
+            <div style="padding:9px 14px;border-top:1px solid #d5d0c6">Выход раствора</div><div style="padding:9px 14px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">__ м³/т</div>
+            <div style="padding:9px 14px;border-top:1px solid #d5d0c6">Набухаемость</div><div style="padding:9px 14px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">__ мл/2г</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- grade spec cards -->
+      <div style="padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:6px">// каталог = карточки-даташиты, марки первичны</div>
+        <div style="font-size:28px;margin-bottom:18px">Каталог марок</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:21px">AB-Drill</div>
+            <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">бурение · API</div>
+            <div style="font-size:14px;color:#6f6a61;border-top:1px dashed #d5d0c6;padding-top:8px">выход: __ м³/т<br>вязкость: __ сП</div>
+            <div style="display:flex;gap:8px;margin-top:auto">
+              <div style="padding:5px 12px;border:2px solid #33312e;border-radius:6px;font-size:13px">SDS ↓</div>
+              <div style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:13px">Запрос</div>
+            </div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:21px">AB-Paper</div>
+            <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">бумага</div>
+            <div style="font-size:14px;color:#6f6a61;border-top:1px dashed #d5d0c6;padding-top:8px">белизна: __ %<br>фракция: __ мкм</div>
+            <div style="display:flex;gap:8px;margin-top:auto">
+              <div style="padding:5px 12px;border:2px solid #33312e;border-radius:6px;font-size:13px">SDS ↓</div>
+              <div style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:13px">Запрос</div>
+            </div>
+          </div>
+          <div style="border:2px solid #33312e;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:21px">AB-Coat</div>
+            <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">ЛКМ</div>
+            <div style="font-size:14px;color:#6f6a61;border-top:1px dashed #d5d0c6;padding-top:8px">реология: __<br>чистота: __</div>
+            <div style="display:flex;gap:8px;margin-top:auto">
+              <div style="padding:5px 12px;border:2px solid #33312e;border-radius:6px;font-size:13px">SDS ↓</div>
+              <div style="padding:5px 12px;border:2px solid #d9480f;color:#d9480f;border-radius:6px;font-size:13px">Запрос</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-top:10px">фильтр по отрасли — чипы над сеткой (бурение / бумага / ЛКМ)</div>
+      </div>
+
+      <!-- lab / tech -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:30px 26px;border-top:2px dashed #d5d0c6">
+        <div>
+          <div style="font-size:24px">Лаборатория и технология</div>
+          <div style="font-size:15px;color:#6f6a61;margin-top:8px">Активация, модификация, контроль каждой партии. Подбор формулы под техническое задание клиента.</div>
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <div style="padding:5px 12px;border:2px dashed #b5b0a8;border-radius:6px;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">сертификат ISO</div>
+            <div style="padding:5px 12px;border:2px dashed #b5b0a8;border-radius:6px;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">требования API</div>
+            <div style="padding:5px 12px;border:2px dashed #b5b0a8;border-radius:6px;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">+ заглушки</div>
+          </div>
+        </div>
+        <div style="height:130px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">фото: лаборатория</div>
+      </div>
+
+      <!-- form -->
+      <div style="padding:30px 26px;border-top:2px solid #33312e;background:#f6f3ec">
+        <div style="font-size:28px;margin-bottom:14px">Запрос спецификации и коммерческого предложения</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:center">
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:15px">Марка ▾</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:15px">Объём, т</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;background:#fff;color:#8a857d;font-size:15px">Контакт</div>
+          <div style="padding:10px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:16px;text-align:center">Отправить</div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <div style="padding:7px 15px;border:2px solid #33312e;border-radius:999px;font-size:14px">WhatsApp</div>
+          <div style="padding:7px 15px;border:2px solid #33312e;border-radius:999px;font-size:14px">Telegram</div>
+          <div style="padding:7px 15px;border:2px solid #33312e;border-radius:999px;font-size:14px"><a href="tel:+37477294888" style="color:inherit;text-decoration:none">☎ +374 77 294 888</a></div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;padding:16px 24px;border-top:2px solid #33312e;font-size:14px;color:#6f6a61">
+        <div>ARTBENT</div><div style="font-family:'PT Mono',monospace;font-size:12px">RU · EN · ՀԱՅ</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================================================ -->
+  <!-- ВАРИАНТ 4 · Быстрый запрос: форма в hero -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ show4 }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Вариант 4 · Быстрый запрос" style="padding:36px 20px 0">
+    <div style="width:860px;max-width:100%;margin:0 auto;background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:5px 6px 0 rgba(51,49,46,0.12);overflow:hidden">
+
+      <div style="display:flex;align-items:center;gap:20px;padding:14px 24px;border-bottom:2px solid #33312e">
+        <div style="font-size:24px;letter-spacing:1px">ARTBENT</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61">RU · EN · ՀԱՅ</div>
+        <div style="padding:7px 14px;border:2px solid #33312e;border-radius:999px;font-size:15px"><a href="https://wa.me/37477294888" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">WhatsApp</a></div>
+        <div style="padding:7px 14px;border:2px solid #33312e;border-radius:999px;font-size:15px"><a href="https://t.me/artbent_llc" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">Telegram</a></div>
+        <div style="font-size:16px"><a href="tel:+37477294888" style="color:inherit;text-decoration:none">☎ +374 77 294 888</a></div>
+      </div>
+
+      <!-- hero with form -->
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;padding:34px 26px;background:#f6f3ec;border-bottom:2px solid #33312e">
+        <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+          <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90">// конверсия на первом экране, всё остальное — подтверждение</div>
+          <div style="font-size:38px;line-height:1.15">Бентонит оптом — коммерческое предложение за 1 рабочий день</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:17px;color:#6f6a61">
+            <div>✓ Своё производство — качество и цена</div>
+            <div>✓ Марки для бурения, бумаги, ЛКМ, косметики</div>
+            <div>✓ Формула под вашу задачу</div>
+            <div>✓ Поставки: РФ · Европа</div>
+          </div>
+        </div>
+        <div style="border:2px solid #33312e;border-radius:10px;background:#fffdf8;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:4px 4px 0 rgba(51,49,46,0.10)">
+          <div style="font-size:22px">Быстрый запрос</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;color:#8a857d;font-size:15px">Отрасль / задача ▾</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;color:#8a857d;font-size:15px">Примерный объём, т</div>
+          <div style="border:2px solid #b5b0a8;border-radius:6px;padding:10px 12px;color:#8a857d;font-size:15px">Телефон или email</div>
+          <div style="padding:11px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:17px;text-align:center">Получить коммерческое предложение</div>
+          <div style="display:flex;gap:8px;justify-content:center;font-size:13px;color:#6f6a61"><span>или:</span><span style="text-decoration:underline">WhatsApp</span><span style="text-decoration:underline">Telegram</span><span style="text-decoration:underline">звонок</span></div>
+        </div>
+      </div>
+
+      <!-- compact grades strip -->
+      <div style="padding:26px;border-bottom:2px dashed #d5d0c6">
+        <div style="font-family:'PT Mono',monospace;font-size:11px;color:#a39c90;margin-bottom:10px">// каталог — компактная лента, детали в карточке продукта</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="padding:10px 16px;border:2px solid #33312e;border-radius:8px;font-size:16px">AB-Drill <span style="color:#a39c90;font-size:13px">бурение</span></div>
+          <div style="padding:10px 16px;border:2px solid #33312e;border-radius:8px;font-size:16px">AB-Drill Pro <span style="color:#a39c90;font-size:13px">API</span></div>
+          <div style="padding:10px 16px;border:2px solid #33312e;border-radius:8px;font-size:16px">AB-Paper <span style="color:#a39c90;font-size:13px">бумага</span></div>
+          <div style="padding:10px 16px;border:2px solid #33312e;border-radius:8px;font-size:16px">AB-Coat <span style="color:#a39c90;font-size:13px">ЛКМ</span></div>
+          <div style="padding:10px 16px;border:2px dashed #d9480f;color:#d9480f;border-radius:8px;font-size:16px">+ формула под техническое задание</div>
+        </div>
+      </div>
+
+      <!-- production + geography band -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:26px;border-bottom:2px dashed #d5d0c6;align-items:stretch">
+        <div style="background:repeating-linear-gradient(45deg,#f1efec,#f1efec 10px,#faf9f7 10px,#faf9f7 20px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d;min-height:100px">фото: производство</div>
+        <div style="border:2px solid #33312e;border-radius:8px;padding:16px"><div style="font-size:19px">Производство и контроль</div><div style="font-size:14px;color:#6f6a61">Каждая партия проходит лабораторию</div></div>
+        <div style="border:2px solid #33312e;border-radius:8px;padding:16px"><div style="font-size:19px">Логистика РФ + ЕС</div><div style="font-size:14px;color:#6f6a61">МКР, мешки; авто и ж/д</div></div>
+      </div>
+
+      <!-- cases placeholder -->
+      <div style="padding:26px;border-bottom:2px solid #33312e">
+        <div style="font-size:24px;margin-bottom:12px">Клиенты и кейсы</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+          <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">лого клиента</div>
+          <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">лого клиента</div>
+          <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">кейс (позже)</div>
+          <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:11px;color:#8a857d">кейс (позже)</div>
+        </div>
+      </div>
+
+      <!-- footer with repeat CTA -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:15px;color:#6f6a61">
+        <div><a href="mailto:info@armbiz.org" style="color:inherit;text-decoration:none">ARTBENT · info@armbiz.org</a></div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div style="font-family:'PT Mono',monospace;font-size:12px">RU · EN · ՀԱՅ</div>
+          <div style="padding:7px 16px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:15px">Получить коммерческое предложение</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================================================ -->
+  <!-- ДОП. ЭКРАНЫ -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ show5 }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Доп. экраны" style="padding:36px 20px 0">
+    <div style="display:grid;grid-template-columns:repeat(2,430px);gap:28px;justify-content:center">
+
+      <!-- product card -->
+      <div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61;margin-bottom:8px">Карточка продукта (марка)</div>
+        <div style="background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:4px 5px 0 rgba(51,49,46,0.12);overflow:hidden">
+          <div style="display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:2px solid #33312e;font-size:16px"><span>ARTBENT</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;flex:1">продукция → AB-Drill</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#6f6a61">RU·EN·ՀԱՅ</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:18px 16px">
+            <div style="min-height:120px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 8px,#faf9f7 8px,#faf9f7 16px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">фото продукта /<br>мешок</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:24px">AB-Drill</div>
+              <div style="font-size:13px;color:#6f6a61">Бентонит для буровых растворов</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span style="padding:3px 9px;border:1px solid #b5b0a8;border-radius:999px;font-size:11px;color:#6f6a61">бурение</span>
+                <span style="padding:3px 9px;border:1px solid #b5b0a8;border-radius:999px;font-size:11px;color:#6f6a61">API</span>
+              </div>
+              <div style="padding:8px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:14px;text-align:center">Запросить коммерческое предложение</div>
+              <div style="padding:7px;border:2px solid #33312e;border-radius:6px;font-size:13px;text-align:center">Скачать SDS ↓</div>
+            </div>
+          </div>
+          <div style="padding:14px 16px;border-top:2px dashed #d5d0c6">
+            <div style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;margin-bottom:8px">// таблица показателей</div>
+            <div style="display:grid;grid-template-columns:1fr auto;font-size:13px;border:2px solid #33312e;border-radius:6px;overflow:hidden">
+              <div style="padding:7px 12px">Выход раствора</div><div style="padding:7px 12px;font-family:'PT Mono',monospace;color:#6f6a61">__ м³/т</div>
+              <div style="padding:7px 12px;border-top:1px solid #d5d0c6">Влажность</div><div style="padding:7px 12px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">≤ __ %</div>
+              <div style="padding:7px 12px;border-top:1px solid #d5d0c6">Фасовка</div><div style="padding:7px 12px;border-top:1px solid #d5d0c6;font-family:'PT Mono',monospace;color:#6f6a61">МКР / 25 кг</div>
+            </div>
+          </div>
+          <div style="padding:12px 16px;border-top:2px dashed #d5d0c6;font-size:13px;color:#6f6a61">Похожие марки: AB-Drill Pro → · вопрос технологу → WhatsApp / Telegram</div>
+        </div>
+      </div>
+
+      <!-- industry page -->
+      <div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61;margin-bottom:8px">Страница отрасли</div>
+        <div style="background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:4px 5px 0 rgba(51,49,46,0.12);overflow:hidden">
+          <div style="display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:2px solid #33312e;font-size:16px"><span>ARTBENT</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;flex:1">отрасли → бурение</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#6f6a61">RU·EN·ՀԱՅ</span></div>
+          <div style="padding:18px 16px">
+            <div style="font-size:24px">Бентонит для бурения</div>
+            <div style="font-size:13px;color:#6f6a61;margin-top:6px">Буровые растворы: стабильность ствола и контроль фильтрации с учетом требований API.</div>
+            <div style="height:80px;margin-top:12px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 8px,#faf9f7 8px,#faf9f7 16px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">фото: буровая установка</div>
+          </div>
+          <div style="padding:14px 16px;border-top:2px dashed #d5d0c6">
+            <div style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;margin-bottom:8px">// задачи отрасли → рекомендованные марки</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="border:2px solid #33312e;border-radius:6px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-size:14px"><span>Вертикальное бурение → AB-Drill</span><span style="color:#d9480f;font-size:12px">Запрос</span></div>
+              <div style="border:2px solid #33312e;border-radius:6px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-size:14px"><span>Бурение → AB-Drill Pro</span><span style="color:#d9480f;font-size:12px">Запрос</span></div>
+            </div>
+          </div>
+          <div style="padding:14px 16px;border-top:2px solid #33312e;background:#f6f3ec;display:flex;gap:8px;align-items:center">
+            <div style="padding:8px 14px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:13px">Запросить коммерческое предложение</div>
+            <div style="padding:7px 12px;border:2px solid #33312e;border-radius:999px;font-size:12px">WhatsApp</div>
+            <div style="padding:7px 12px;border:2px solid #33312e;border-radius:999px;font-size:12px">Telegram</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- production page -->
+      <div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61;margin-bottom:8px">Страница «О производстве»</div>
+        <div style="background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:4px 5px 0 rgba(51,49,46,0.12);overflow:hidden">
+          <div style="display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:2px solid #33312e;font-size:16px"><span>ARTBENT</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;flex:1">о производстве</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#6f6a61">RU·EN·ՀԱՅ</span></div>
+          <div style="height:100px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 8px,#faf9f7 8px,#faf9f7 16px);border-bottom:2px solid #33312e;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">широкое фото: цех / карьер</div>
+          <div style="padding:16px">
+            <div style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;margin-bottom:8px">// этапы: сырьё → активация → помол → контроль → фасовка</div>
+            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center">
+              <div style="border:2px solid #33312e;border-radius:6px;padding:8px 4px;font-size:12px">Сырьё</div>
+              <div style="border:2px solid #33312e;border-radius:6px;padding:8px 4px;font-size:12px">Активация</div>
+              <div style="border:2px solid #33312e;border-radius:6px;padding:8px 4px;font-size:12px">Помол</div>
+              <div style="border:2px solid #33312e;border-radius:6px;padding:8px 4px;font-size:12px">Контроль</div>
+              <div style="border:2px solid #33312e;border-radius:6px;padding:8px 4px;font-size:12px">Фасовка</div>
+            </div>
+          </div>
+          <div style="padding:14px 16px;border-top:2px dashed #d5d0c6;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">фото лаборатории</div>
+            <div style="height:64px;border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">сертификаты (заглушки)</div>
+          </div>
+          <div style="padding:14px 16px;border-top:2px solid #33312e;background:#f6f3ec"><div style="padding:8px 14px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:13px;display:inline-block">Запросить образцы</div></div>
+        </div>
+      </div>
+
+      <!-- contacts page -->
+      <div>
+        <div style="font-family:'PT Mono',monospace;font-size:12px;color:#6f6a61;margin-bottom:8px">Контакты / запрос коммерческого предложения</div>
+        <div style="background:#fffdf8;border:2px solid #33312e;border-radius:10px;box-shadow:4px 5px 0 rgba(51,49,46,0.12);overflow:hidden">
+          <div style="display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:2px solid #33312e;font-size:16px"><span>ARTBENT</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#a39c90;flex:1">контакты</span><span style="font-family:'PT Mono',monospace;font-size:10px;color:#6f6a61">RU·EN·ՀԱՅ</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:18px 16px">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:20px">Запросить коммерческое предложение</div>
+              <div style="border:2px solid #b5b0a8;border-radius:6px;padding:8px 10px;color:#8a857d;font-size:13px">Компания</div>
+              <div style="border:2px solid #b5b0a8;border-radius:6px;padding:8px 10px;color:#8a857d;font-size:13px">Отрасль ▾</div>
+              <div style="border:2px solid #b5b0a8;border-radius:6px;padding:8px 10px;color:#8a857d;font-size:13px">Объём, т</div>
+              <div style="border:2px solid #b5b0a8;border-radius:6px;padding:8px 10px;color:#8a857d;font-size:13px">Телефон / email</div>
+              <div style="padding:9px;background:#d9480f;color:#fffdf8;border-radius:6px;font-size:14px;text-align:center">Отправить</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:20px">Напрямую</div>
+              <div style="padding:8px 12px;border:2px solid #33312e;border-radius:999px;font-size:13px;text-align:center">WhatsApp</div>
+              <div style="padding:8px 12px;border:2px solid #33312e;border-radius:999px;font-size:13px;text-align:center">Telegram</div>
+              <div style="padding:8px 12px;border:2px solid #33312e;border-radius:999px;font-size:13px;text-align:center"><a href="tel:+37477294888" style="color:inherit;text-decoration:none">☎ +374 77 294 888</a></div>
+              <div style="height:70px;background:repeating-linear-gradient(45deg,#f1efec,#f1efec 8px,#faf9f7 8px,#faf9f7 16px);border:2px dashed #b5b0a8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'PT Mono',monospace;font-size:10px;color:#8a857d">карта / адрес</div>
+              <div style="font-size:12px;color:#6f6a61">реквизиты · email · часы работы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { tab: 0 };
+
+  renderVals() {
+    const labels = [
+      'Вариант 1 · Классика',
+      'Вариант 2 · От отрасли',
+      'Вариант 3 · Технический',
+      'Вариант 4 · Быстрый запрос',
+      'Доп. экраны',
+    ];
+    const descs = [
+      'Классическая воронка: оффер → отрасли → таблица марок → преимущества → производство/география → форма. Безопасный, понятный путь.',
+      'Сегментация с порога: hero — это выбор отрасли, дальше секции «задача + марки + CTA» на каждую отрасль, sticky-бар с контактами.',
+      'Для технолога: цифры и спецификации на первом экране, каталог как карточки-даташиты с SDS, лаборатория и сертификаты.',
+      'Лидоген-агрессивный: форма быстрого запроса прямо в hero, остальная страница — короткие подтверждения доверия.',
+    ];
+    const t = this.state.tab;
+    const tabBtns = labels.map((label, i) => ({
+      label,
+      onClick: () => this.setState({ tab: i }),
+      style: {
+        fontFamily: "'Neucha', cursive",
+        fontSize: '16px',
+        padding: '7px 16px',
+        borderRadius: '999px',
+        cursor: 'pointer',
+        border: '2px solid #33312e',
+        background: i === t ? '#33312e' : '#fffdf8',
+        color: i === t ? '#fffdf8' : '#33312e',
+        boxShadow: i === t ? 'none' : '2px 2px 0 rgba(51,49,46,0.15)',
+      },
+    }));
+    return {
+      tabBtns,
+      tabDesc: descs[t] || 'Наброски внутренних экранов: карточка продукта, страница отрасли, производство, контакты.',
+      show1: t === 0,
+      show2: t === 1,
+      show3: t === 2,
+      show4: t === 3,
+      show5: t === 4,
+    };
+  }
+}
+</script>
+</body>
+</html>
