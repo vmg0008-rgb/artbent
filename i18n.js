@@ -385,8 +385,7 @@
     "нестанд.": ["custom", "անհատական"],
     "Навигация": ["Navigation", "Նավիգացիա"],
     "Политика конфиденциальности": ["Privacy policy", "Գաղտնիության քաղաքականություն"],
-    "© 20__ Artbent. Реквизиты компании": ["© 20__ Artbent. Company details", "© 20__ Artbent. Ընկերության վավերապայմաններ"],
-    "© 20__ Artbent · Производство бентонита": ["© 20__ Artbent · Bentonite manufacturing", "© 20__ Artbent · Բենտոնիտի արտադրություն"],
+    "© 2026 ArtBent. All rights reserved.": ["© 2026 ArtBent. All rights reserved.", "© 2026 ArtBent. All rights reserved."],
 
     // ---- product page ----
     "Бентонитовый порошок для буровых растворов: вертикальное бурение и ГНБ. Стабильная вязкость, тонкая фильтрационная корка, высокий выход раствора.": ["Bentonite powder for drilling fluids: vertical drilling and HDD. Stable viscosity, thin filter cake, high slurry yield.", "Բենտոնիտի փոշի հորատման լուծույթների համար՝ ուղղահայաց հորատում և ՀՈւՀ: Կայուն մածուցիկություն, բարակ ֆիլտրացիոն կեղև, լուծույթի բարձր ելք:"],
@@ -483,7 +482,6 @@
     "Склад, автотранспорт, железная дорога и морские перевозки": ["Warehousing, road, rail and sea freight", "Պահեստավորում, ավտոմոբիլային, երկաթուղային և ծովային փոխադրումներ"],
     "Крафт-мешки на паллетах для ЛКМ и косметики.": ["Kraft paper sacks on pallets for coatings and cosmetics.", "Կրաֆտ թղթե պարկեր պալետների վրա՝ ծածկույթների և կոսմետիկայի համար։"],
     "Производство и поставка бентонита для промышленности. По всему миру.": ["Manufacturing and supply of industrial bentonite worldwide.", "Արդյունաբերական բենտոնիտի արտադրություն և մատակարարում ամբողջ աշխարհում:"],
-    "© 2026 Artbent · Производство бентонита": ["© 2026 Artbent · Bentonite manufacturing", "© 2026 Artbent · Բենտոնիտի արտադրություն"],
     "Подходят для бурения": ["Suitable for drilling", "Հարմար են հորատման համար"],
     "Формирование плотного комка после контакта материала с влагой.": ["Forming a dense clump after contact with moisture.", "Խիտ կուտակի ձևավորում՝ խոնավության հետ շփվելուց հետո:"],
     "Эффективное поглощение и удержание жидкости внутри минеральной структуры.": ["Effective absorption and retention of liquid within the mineral structure.", "Հեղուկի արդյունավետ կլանում և պահում հանքային կառուցվածքում:"],
