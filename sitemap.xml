@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://artbent.org/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20Product.dc.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20Industry.dc.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20Production.dc.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20DR-100.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20PA-200.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20CT-300.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20CL-400.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://artbent.org/Artbent%20Contacts.dc.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
